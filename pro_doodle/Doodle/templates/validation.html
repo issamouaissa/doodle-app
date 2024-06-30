@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'validation.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de Vote</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Merci pour votre vote !</h1>
+        <p>Votre vote pour la réunion <strong>{{ sondage.name }}</strong> a bien été enregistré.</p>
+    </div>
+</body>
+
+</html>
+{% endblock %}

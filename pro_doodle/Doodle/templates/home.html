@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+<div class="container mt-3">
+  <div class="row align-items-center" style="min-height: 70vh;">
+    <div class="col-lg-6">
+      <h1 class="display-1 fw-bold">La <br>planification <br>professionnelle <br>facilitée</h1>
+      <p class="lead">Doodle est le moyen le plus rapide et le plus facile pour tout planifier, des réunions à la
+        prochaine grande collaboration.</p>
+      <button class="btn btn-lg btn-primary mt-3" onclick="window.location.href='sondage'">Créer un Doodle</button>
+    </div>
+    <div class="col-lg-6 d-flex justify-content-center">
+      <img src="{% static 'photoHome.png' %}" alt="Description de l'image" class="img-fluid large-image">
+    </div>
+  </div>
+</div>
+<section class="features py-5 bg-light">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-3">
+        <div class="feature">
+          <img
+            src="https://images.ctfassets.net/p24lh3qexxeo/4peisM5Yz9WmMjIKstNUCX/6a4b7a01d6c57dea73fff9c78f81d3d7/first-icon.png?w=1280&q=80&fm=webp"
+            alt="Icon 1" class="mb-3">
+          <h3>Approuvé par plus de 70 000 entreprises dans le monde</h3>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="feature">
+          <img
+            src="https://images.ctfassets.net/p24lh3qexxeo/6F6MxkkpIbU1W3HXRUGgsz/3c02c9d21ce0f089345553b3dee0b21e/second-icon.png?w=1280&q=80&fm=webp"
+            alt="Icon 2" class="mb-3">
+          <h3>2 millions de réunions programmées le mois dernier</h3>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="feature">
+          <img
+            src="https://images.ctfassets.net/p24lh3qexxeo/IwWmCELvQNRwAoTUcBwgS/be349b966f36d1bc2a7ab6921198f4ad/third-icon.png?w=1280&q=80&fm=webp"
+            alt="Icon 3" class="mb-3">
+          <h3>Sécurité au niveau de l’entreprise</h3>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="feature">
+          <img
+            src="https://images.ctfassets.net/p24lh3qexxeo/5r5Sg3iLExDQHxaspciFSx/b7c0fac70479943da5724be343eb84d6/fourth-icon.png?w=1280&q=80&fm=webp"
+            alt="Icon 4" class="mb-3">
+          <h3>Commence à prendre des rendez-vous en 5 minutes</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="{% static 'scripts.js' %}"></script>
+{% endblock %}

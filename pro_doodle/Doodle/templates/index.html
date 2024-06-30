@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Welcome</h2>
+        {% if user.is_authenticated %}
+        <br><br>
+        <h3>Your account <strong>{{ user.username }}</strong> is created successfully!</h3>
+        <a href="/signout" class="btn btn-danger">Logout</a>
+        {% else %}
+        <div class="btn-container">
+            <a href="signin" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+            <a href="signup" class="btn btn-success">Signup</a>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
+{% endblock %}

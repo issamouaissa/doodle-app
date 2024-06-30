@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'confirmation.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Réunion</title>
+    <link rel="stylesheet" href="{% static 'confirmation.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Détails de la Réunion</h1>
+        <p><strong>Nom de la Réunion:</strong> {{ sondage.name }}</p>
+        <p><strong>Lieu:</strong> {{ sondage.lieux }}</p>
+        <p><strong>Date:</strong> {{ sondage.date }}</p>
+        <p><strong>Heure:</strong> {{ sondage.heure }}</p>
+
+        <h2>Dates sélectionnées</h2>
+        <ul>
+            {% for date_sondage in dates_sondage %}
+            <li>{{ date_sondage.date }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Formulaire de vote -->
+        <form method="get" action="{% url 'vote' sondage_id=sondage.id %}">
+            {% csrf_token %}
+            <input type="submit" value="Voter">
+        </form>
+    </div>
+</body>
+
+</html>
+{% endblock %}

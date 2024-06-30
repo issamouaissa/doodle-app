@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'vote.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Réunion</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Détails de la Réunion</h1>
+        <p><strong>Nom de la Réunion:</strong> {{ sondage.name }}</p>
+        <p><strong>Lieu:</strong> {{ sondage.lieux }}</p>
+        <p><strong>Date:</strong> {{ sondage.date }}</p>
+        <p><strong>Heure:</strong> {{ sondage.heure }}</p>
+
+        <h2>Sélectionnez une date</h2>
+        <form method="post" action="{% url 'vote' sondage_id=sondage.id %}">
+            {% csrf_token %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Choisir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for date_sondage in dates_sondage %}
+                    <tr>
+                        <td>{{ date_sondage.date }}</td>
+                        <td><input type="checkbox" name="selected_dates" value="{{ date_sondage.id }}"></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <input type="submit" value="Valider">
+        </form>
+    </div>
+</body>
+
+</html>
+{% endblock %}

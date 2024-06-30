@@ -1,0 +1,68 @@
+/* Styles pour les titres */
+h1.display-1 {
+    font-size: 5rem;
+    /* Utiliser des unités relatives pour une meilleure réactivité */
+    line-height: 1.2;
+}
+
+/* Styles pour les paragraphes */
+p.lead {
+    font-size: 2.25rem;
+    /* Taille de police relative */
+    margin-top: 2.5rem;
+    /* Marge supérieure pour les paragraphes */
+}
+
+/* Styles pour les images fluides */
+.img-fluid {
+    max-width: 100%;
+    
+    /* Hauteur maximale pour les grandes images */
+    height: auto;
+}
+.large-image {
+    max-width: 100%;
+    max-height: 1000px;
+    /* Hauteur maximale pour les grandes images */
+}
+
+/* Styles pour le bouton personnalisé */
+.btn-primary {
+    background-color: #0a5c48;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 22px;
+    font-size: 1.25rem;
+    /* Taille de police relative */
+}
+
+.btn-primary:hover {
+    color: black;
+    background-color: #acc8c1;
+}
+
+/* Styles pour la section des fonctionnalités */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature img {
+    max-width: 100px;
+    /* Taille d'icône fixe */
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 1.25rem;
+    /* Taille de police relative */
+    margin-top: 10px;
+}

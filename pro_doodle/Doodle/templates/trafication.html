@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %} Trafication {% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'trafication.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forfaits Doodle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="pricing">
+        <h1>Choisissez le bon forfait</h1>
+
+        <section class="plan free">
+            <h2>Gratuit</h2>
+            <div class="price">
+                <p><span class="currency">$</span>0</p>
+                <p>gratuit à jamais</p>
+            </div>
+            <p>1 utilisateur</p>
+            <button>S'inscrire</button>
+            <ul>
+                <li>Les sondages de groupe en illimité</li>
+                <li>Une fiche d'enregistrement</li>
+                <li>Une page de réservation</li>
+                <li>Une réunion 1:1</li>
+                <li>Vidéo-conférences Google Meet et Zoom</li>
+            </ul>
+        </section>
+
+        <section class="plan pro popular">
+            <h2>Pro</h2>
+            <div class="price">
+                <p><span class="currency">$</span>6,95</p>
+                <p>par utilisateur par mois</p>
+                <p>payé annuellement</p>
+            </div>
+            <p>1 utilisateur</p>
+            <button>Acheter Pro</button>
+            <ul>
+                <li>Toutes les fonctionnalités gratuites, plus</li>
+                <li>Aucune pub</li>
+                <li>Créneaux horaires des sondages de groupe en illimité</li>
+                <li>Fiches d'enregistrement illimitées</li>
+                <li>Les pages de réservations en illimité</li>
+                <li>Les réunions individuelles en illimité</li>
+                <li>Marque personnalisée</li>
+                <li>Les vidéo-conférences Microsoft Teams et Webex</li>
+            </ul>
+        </section>
+
+        <section class="plan team">
+            <h2>Team</h2>
+            <div class="price">
+                <p><span class="currency">$</span>8,95</p>
+                <p>par utilisateur par mois</p>
+                <p>payé annuellement</p>
+            </div>
+            <p>5 utilisateurs</p>
+            <button>Acheter Team</button>
+            <ul>
+                <li>Toutes les fonctionnalités Pro, plus</li>
+                <li>Console admin</li>
+                <li>Rôles et autorisations</li>
+                <li>Événements à plusieurs organisateurs</li>
+                <li>Réservez pour le compte de quelqu'un</li>
+                <li>Rapports d'activités</li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+
+</html>
+
+{% endblock %}

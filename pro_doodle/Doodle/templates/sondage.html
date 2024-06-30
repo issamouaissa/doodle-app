@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Ajouter un sondage{% endblock %}
+{% block content %}
+<br><br>
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'sondage.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<center>
+  <form method="post" action="">
+    {% csrf_token %}
+    <div style="margin-left: 44%; margin-bottom: 1%;" class="logo-container">
+      <img src="https://downloads.intercomcdn.com/i/o/406918/b7ce909b61c1a9944dc4a5b8/038baa21c4d02f9229166ef813648016.png"
+        alt="Doodle Logo" class="logo-img">
+      <h2><b>Doodle</b></h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Ajouter un sondage</h1>
+          <p>Veuillez remplir le formulaire pour ajouter un nouveau sondage</p>
+          {{ form.as_p }}
+          {% if form.errors %}
+          <div class="alert alert-danger">
+            {{ form.errors }}
+          </div>
+          {% endif %}
+          <input type="submit" class="btn btn-secondary" value="Ajouter">
+        </div>
+      </div>
+    </div>
+  </form>
+</center>
+</body>
+</html>
+{% endblock %}
+
